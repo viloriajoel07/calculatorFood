@@ -10,14 +10,14 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-zinc-950 !text-white">
+  <body class="bg-black md:bg-zinc-950 !text-white text-sm">
     <main class="flex w-full flex-col h-screen justify-center items-center">
       <div
         id="form"
-        class="max-w-[42rem] flex flex-col jusity-center items-center border-4 border-zinc-900 bg-black gap-8 px-16 py-10 shadow-2xl rounded-xl"
+        class="max-w-[32rem] flex flex-col jusity-center items-center md:border-4 border-zinc-900 bg-black gap-8 px-16 py-10 shadow-2xl rounded-xl"
       >
         <h2
-          class="text-2xl md:text-4xl font-bold text-white text-center uppercase"
+          class="text-2xl md:text-3xl font-bold text-white text-center uppercase"
         >
           CALCULADORA DE ALIMENTO
         </h2>
@@ -44,18 +44,23 @@
             placeholder="Animales"
           />
         </div>
-        <button
-          type="submit"
-          onclick="onSubmit(event)"
-          class="bg-gradient-to-r from-sky-500 via-violet-600 to-pink-700 w-full px-4 py-3 shadow-2xl shadow-black rounded-xl text-white font-bold"
-        >
-          Calcular
-        </button>
+        <div class="flex w-full">
+          <button
+            type="submit"
+            onclick="onSubmit(event)"
+            class="bg-pink-600/80 hover>bg-pink-600 w-full px-8 py-3 shadow-2xl shadow-black rounded-xl text-white font-bold"
+          >
+            Calcular
+          </button>
+        </div>
         <div
           class="w-full overflow-auto flex flex-col gap-6"
           id="sec_table"
         ></div>
       </div>
+      <span class="mt-8 absolute bottom-4">
+        Derechos reservados - Joel Viloria</span
+      >
     </main>
 
     <script>
@@ -79,10 +84,10 @@
         <table class="table w-full">
           <thead class="border border-black">
             <tr class="bg-pink-600/80">
-              <th class="border border-zinc-900">PESO UNITARIO</th>
-              <th class="border border-zinc-900">PESO TOTAL</th>
-              <th class="border border-zinc-900">KG</th>
-              <th class="border border-zinc-900">BULTOS</th>
+              <th class="border border-zinc-900 text-xs">PESO UNITARIO</th>
+              <th class="border border-zinc-900 text-xs">PESO TOTAL</th>
+              <th class="border border-zinc-900 text-xs">KG</th>
+              <th class="border border-zinc-900 text-xs">BULTOS</th>
             </tr>
           </thead>
           <tbody>
